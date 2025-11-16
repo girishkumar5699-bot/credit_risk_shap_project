@@ -1,0 +1,20 @@
+Global SHAP summary — top 5 features and interpretation:
+1. num__debt_to_income: mean(|SHAP|)=0.0911 — higher absolute SHAP means larger impact on the model output.
+2. num__employment_length_years: mean(|SHAP|)=0.0506 — higher absolute SHAP means larger impact on the model output.
+3. num__loan_term_months: mean(|SHAP|)=0.0457 — higher absolute SHAP means larger impact on the model output.
+4. num__credit_score: mean(|SHAP|)=0.0449 — higher absolute SHAP means larger impact on the model output.
+5. num__num_open_accounts: mean(|SHAP|)=0.0352 — higher absolute SHAP means larger impact on the model output.
+
+Local case studies (plain-language):
+
+Case: false_negative (test index 23)
+Model predicted probability of default = 0.059; predicted label = 0; true label = 1
+Top drivers:
+ - num__loan_term_months => decreases probability by SHAP -0.0535
+ - num__credit_score => increases probability by SHAP 0.0276
+ - num__num_open_accounts => decreases probability by SHAP -0.0264
+ - num__age => decreases probability by SHAP -0.0255
+ - num__debt_to_income => increases probability by SHAP 0.0237
+ - cat__home_ownership_RENT => decreases probability by SHAP -0.0212
+ - num__employment_length_years => increases probability by SHAP 0.0185
+ - num__loan_amount => decreases probability by SHAP -0.0161
